@@ -27,17 +27,6 @@
     {},
     {},
     {
-        "obj_type": "Output_Port_Table",
-        "Output_Ports": [
-            {
-                "Name": "sum",
-                "Type": "int"
-            }
-        ],
-        "is_visible": false
-    },
-    {},
-    {
         "obj_type": "State_Bubble",
         "state_name": "WAIT_A1",
         "id": 2094155464,
@@ -86,16 +75,21 @@
             123
         ]
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
+    {
+        "obj_type": "Output_Port_Table",
+        "Output_Ports": [
+            {
+                "Name": "sum",
+                "Type": "int"
+            }
+        ],
+        "is_visible": false
+    },
+    {
+        "obj_type": "Constructor_Code_Box",
+        "code_box_contents": "//set state vars\nstate.curr_arg1 = 0;\nstate.curr_arg2 = 0;\nstate.arg_1_ready = false;\nstate.arg_2_ready = false;\n\nstate.sum_bags = 0;",
+        "is_visible": false
+    },
     {
         "obj_type": "Input_Port_Table",
         "Input_Ports": [
@@ -110,6 +104,7 @@
         ],
         "is_visible": false
     },
+    {},
     {},
     {
         "obj_type": "State_Variable_Table",
@@ -147,23 +142,38 @@
         "include_dirs_box": "",
         "is_visible": false
     },
-    {},
-    {},
-    {},
     {
         "obj_type": "Constructor_Args_Table",
         "Constructor_Args": [],
         "is_visible": false
     },
-    {
-        "obj_type": "Constructor_Code_Box",
-        "code_box_contents": "//set state vars\nstate.curr_arg1 = 0;\nstate.curr_arg2 = 0;\nstate.arg_1_ready = false;\nstate.arg_2_ready = false;\n\nstate.sum_bags = 0;",
-        "is_visible": false
-    },
+    {},
+    {},
+    {},
     {
         "obj_type": "Editable_Model_Title",
         "title": "Basic_Adder"
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {
@@ -224,61 +234,6 @@
     {},
     {},
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {
-        "obj_type": "External_Transition",
-        "segments": [
-            {
-                "p1_x": 507.0,
-                "p1_y": 440.0,
-                "p2_x": 908.0,
-                "p2_y": 440.0,
-                "this_seg_id": 2233878870,
-                "line_seg_attatched_to_head_id": null,
-                "line_seg_attatched_to_tail_id": null
-            }
-        ],
-        "x_pos": 0.0,
-        "y_pos": 0.0,
-        "external_transition_conditions": [
-            {
-                "condition_row_pair": {
-                    "condtion": "arg_1_ready == true",
-                    "row": 0
-                }
-            },
-            {
-                "condition_row_pair": {
-                    "condtion": "arg_2_ready == false",
-                    "row": 0
-                }
-            }
-        ],
-        "external_transition_conditions_is_visible": false,
-        "external_transition_conditions_size": [
-            610,
-            200
-        ],
-        "transition_data_location_x": 677.0,
-        "transition_data_location_y": 297.0,
-        "state_bubble_attached_to_head_name": "WAIT_A2",
-        "state_bubble_attached_to_tail_name": "WAIT_A1",
-        "state_bubble_attached_to_head_ta": "inf",
-        "state_bubble_attached_to_tail_ta": "inf",
-        "state_bubble_attached_to_head_id": 1709449404,
-        "state_bubble_attached_to_tail_id": 2094155464,
-        "snap_attached_to_head_id": 4,
-        "snap_attached_to_tail_id": 0
-    },
     {},
     {},
     {},
@@ -354,26 +309,15 @@
     {},
     {},
     {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {
         "obj_type": "External_Transition",
         "segments": [
             {
-                "p1_x": 1038.0,
+                "p1_x": 507.0,
                 "p1_y": 440.0,
-                "p2_x": 1492.0,
-                "p2_y": 441.0,
-                "this_seg_id": 3026658776,
+                "p2_x": 908.0,
+                "p2_y": 440.0,
+                "this_seg_id": 2233878870,
                 "line_seg_attatched_to_head_id": null,
                 "line_seg_attatched_to_tail_id": null
             }
@@ -389,36 +333,27 @@
             },
             {
                 "condition_row_pair": {
-                    "condtion": "arg_2_ready == true",
+                    "condtion": "arg_2_ready == false",
                     "row": 0
                 }
             }
         ],
         "external_transition_conditions_is_visible": false,
         "external_transition_conditions_size": [
-            625,
+            610,
             200
         ],
-        "transition_data_location_x": 1235.0,
-        "transition_data_location_y": 304.0,
-        "state_bubble_attached_to_head_name": "SUM",
-        "state_bubble_attached_to_tail_name": "WAIT_A2",
-        "state_bubble_attached_to_head_ta": "5",
+        "transition_data_location_x": 677.0,
+        "transition_data_location_y": 297.0,
+        "state_bubble_attached_to_head_name": "WAIT_A2",
+        "state_bubble_attached_to_tail_name": "WAIT_A1",
+        "state_bubble_attached_to_head_ta": "inf",
         "state_bubble_attached_to_tail_ta": "inf",
-        "state_bubble_attached_to_head_id": 672688239,
-        "state_bubble_attached_to_tail_id": 1709449404,
+        "state_bubble_attached_to_head_id": 1709449404,
+        "state_bubble_attached_to_tail_id": 2094155464,
         "snap_attached_to_head_id": 4,
         "snap_attached_to_tail_id": 0
     },
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
     {},
     {},
     {
@@ -511,6 +446,71 @@
         "snap_attached_to_head_id": 2,
         "snap_attached_to_tail_id": 2
     },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {
+        "obj_type": "External_Transition",
+        "segments": [
+            {
+                "p1_x": 1038.0,
+                "p1_y": 440.0,
+                "p2_x": 1492.0,
+                "p2_y": 441.0,
+                "this_seg_id": 3026658776,
+                "line_seg_attatched_to_head_id": null,
+                "line_seg_attatched_to_tail_id": null
+            }
+        ],
+        "x_pos": 0.0,
+        "y_pos": 0.0,
+        "external_transition_conditions": [
+            {
+                "condition_row_pair": {
+                    "condtion": "arg_1_ready == true",
+                    "row": 0
+                }
+            },
+            {
+                "condition_row_pair": {
+                    "condtion": "arg_2_ready == true",
+                    "row": 0
+                }
+            }
+        ],
+        "external_transition_conditions_is_visible": false,
+        "external_transition_conditions_size": [
+            625,
+            200
+        ],
+        "transition_data_location_x": 1235.0,
+        "transition_data_location_y": 304.0,
+        "state_bubble_attached_to_head_name": "SUM",
+        "state_bubble_attached_to_tail_name": "WAIT_A2",
+        "state_bubble_attached_to_head_ta": "5",
+        "state_bubble_attached_to_tail_ta": "inf",
+        "state_bubble_attached_to_head_id": 672688239,
+        "state_bubble_attached_to_tail_id": 1709449404,
+        "snap_attached_to_head_id": 4,
+        "snap_attached_to_tail_id": 0
+    },
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
     {},
     {},
     {},

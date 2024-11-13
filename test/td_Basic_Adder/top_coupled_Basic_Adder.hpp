@@ -48,10 +48,15 @@
             auto gen_arg2			= addComponent<Generator<int>>("gen_arg2", set_test_data<int, Variant_Goblin>(test_set_enumeration, "arg2", generator_data));
 
             auto model_Basic_Adder        	= addComponent<Basic_Adder>("Basic_Adder");
+            //auto comp_sum			= addComponent<Comparator<int>>("comp_sum", set_oracle_data<int, Variant_Goblin>(test_set_enumeration, "sum", comparator_data));
 
+            //auto decider				= addComponent<Decider>("decider", set_path_data(test_set_enumeration, path_data), get_number_of_conditions<Variant_Goblin>(comparator_data[test_set_enumeration]), log_file_name);
             addCoupling(gen_arg1->output_port, model_Basic_Adder->arg1);
             addCoupling(gen_arg2->output_port, model_Basic_Adder->arg2);
 
+            //addCoupling(model_Basic_Adder->sum, comp_sum->input_port);
+
+            //addCoupling(comp_sum->report_port, decider->report_port);
 
 
 		}

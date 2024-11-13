@@ -47,11 +47,11 @@ std::map<int, std::map<std::string, std::vector<std::tuple<double, Variant_Gobli
     std::map<std::string, std::vector<std::tuple<double, Variant_Goblin>>> tc3;
     std::vector<std::tuple<double, Variant_Goblin>> arg1_3; 
     arg1_3.push_back(std::make_tuple(1, int(5)));
-    arg1_3.push_back(std::make_tuple(3, int(-10)));
+    arg1_3.push_back(std::make_tuple(10, int(5)));
     tc3["arg1"] = arg1_3;
     std::vector<std::tuple<double, Variant_Goblin>> arg2_3; 
-    arg2_3.push_back(std::make_tuple(2, int(5)));
-    arg2_3.push_back(std::make_tuple(4, int(5)));
+    arg2_3.push_back(std::make_tuple(3, int(-10)));
+    arg2_3.push_back(std::make_tuple(11, int(5)));
     tc3["arg2"] = arg2_3;
 
     std::map<int, std::map<std::string, std::vector<std::tuple<double, Variant_Goblin>>>> test_cases;
@@ -82,8 +82,8 @@ std::map<int, std::map<std::string, std::vector<std::tuple<int, Variant_Goblin>>
     //Test Case: 3 Expected Outputs ---------------------------------------------------------
     std::map<std::string, std::vector<std::tuple<int, Variant_Goblin>>> eo3;
     std::vector<std::tuple<int, Variant_Goblin>> sum_3_eo; 
-    sum_3_eo.push_back(std::make_tuple(1, int(10)));
-    sum_3_eo.push_back(std::make_tuple(2, int(-5)));
+    sum_3_eo.push_back(std::make_tuple(1, int(5)));
+    sum_3_eo.push_back(std::make_tuple(2, int(10)));
     eo3["sum"] = sum_3_eo;
 
     std::map<int, std::map<std::string, std::vector<std::tuple<int, Variant_Goblin>>>> comparator_data;
