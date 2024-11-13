@@ -1,0 +1,18 @@
+{
+    "shared_memory_structures": {
+        "Basic_Adder": {
+            "curr_arg1": "int",
+            "curr_arg2": "int",
+            "arg_1_ready": "bool",
+            "arg_2_ready": "bool",
+            "sum_bags": "int"
+        }
+    },
+    "atomic_model_states": {
+        "Basic_Adder": [
+            "WAIT_A1",
+            "SUM",
+            "WAIT_A2"
+        ]
+    }
+}
